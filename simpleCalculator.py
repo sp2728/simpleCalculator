@@ -34,7 +34,11 @@ class calculator:
     #Squareroot of a number
     @staticmethod
     def squareRoot(num1):
-        return math.sqrt(num1)
+        try:
+            return math.sqrt(num1)
+        except ValueError:
+            print("Invalid Input")
+
 
 
 if __name__ == '__main__':
