@@ -3,26 +3,35 @@ import math
 
 class calculator:
 
+    #Addition
     @staticmethod
     def add(num1, num2):
-        return num1 + num2
+        return round(num1 + num2, 6)
 
+    #Subtraction
     @staticmethod
     def subtraction(num1, num2):
         return num1 - num2
 
+    #Multiplication
     @staticmethod
     def multiply(num1, num2):
         return num1 * num2
 
+    #Division
     @staticmethod
     def divide(num1, num2):
-        return num1 / num2
+        try:
+            return num1 / num2
+        except ZeroDivisionError:
+            print("Divide by Zero is not possible")
 
+    #Sqaure of a number
     @staticmethod
     def square(num1):
         return num1 * num1
 
+    #Squareroot of a number
     @staticmethod
     def squareRoot(num1):
         return math.sqrt(num1)
@@ -74,4 +83,3 @@ if __name__ == '__main__':
 
         else:
             print("Invalid Choice")
-
