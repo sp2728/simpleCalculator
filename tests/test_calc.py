@@ -1,26 +1,28 @@
 
-from simpleCalculator import calculator as Calculator
+from simpleCalculator import calculator
 import pytest
 import unittest
 
 
 class test_PythonSimpleCalc(unittest.TestCase):
     def test_calc(self):
-        c = Calculator()
-        assert c
+        assert calculator
 
     def test_calc_add(self):
-        c = Calculator()
-        assert c.add(3, 2) == 5
+
+        assert calculator.add(3, 2) == 5
 
     def test_calc_subtract(self):
-        c = Calculator()
-        assert c.subtraction(0, 10) == -10
+        assert calculator.subtraction(0, 10) == -10
 
     def test_calc_multiply(self):
-        c = Calculator()
-        assert c.multiply(2, 2) == 4
+        assert calculator.multiply(2, 2) == 4
 
     def test_calc_divide(self):
-        c = Calculator()
-        assert c.divide(10, 5) == 2
+        assert calculator.divide(10, 5) == 2
+
+    def test_calc_square(self):
+        assert calculator.square(5)== 25
+
+    def test_calc_squareroot(self):
+        assert calculator.squareRoot(25) == 5
